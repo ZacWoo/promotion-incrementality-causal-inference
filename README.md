@@ -10,7 +10,7 @@
 
 - **What I did:** Built a **store × day** panel, merged store metadata, and estimated **how log daily sales move on promotion days** while stripping out slow-moving store differences and common calendar shocks.
 - **What I found (Rossmann):** In the main specification, promotion days are associated with roughly **0.31 log points** higher sales (on the order of **one-third** higher volume in levels under a log link), after controlling for store fixed effects, **ISO week** fixed effects, day-of-week, and holiday indicators—with **standard errors clustered by store** (within-R² about **0.43** on the estimation sample).
-- **Caveat in plain English:** In this dataset the **promo flag is national**—every store shares the same value on a given calendar day—so you **cannot** add a full **calendar-date** fixed effect and still estimate a standalone promo coefficient. Identification leans on **variation of promo within store-week** (promo on vs off days in the same week, for the same store) plus **heterogeneity** across stores. That rules out a naive “date FE + promo” story and is called out explicitly below.
+- **Caveat:** In this dataset the **promo flag is national**—every store shares the same value on a given calendar day—so you **cannot** add a full **calendar-date** fixed effect and still estimate a standalone promo coefficient. Identification leans on **variation of promo within store-week** (promo on vs off days in the same week, for the same store) plus **heterogeneity** across stores. That rules out a naive “date FE + promo” story and is called out explicitly below.
 
 ---
 
