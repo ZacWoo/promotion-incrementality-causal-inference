@@ -12,4 +12,3 @@ python scripts/download_data.py
 
 The script uses [Kaggle Hub](https://github.com/Kaggle/kagglehub) and does not require the separate Kaggle CLI.
 
-Do not commit the CSVs if you prefer to keep the repo small; the download script reproduces them.
