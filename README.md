@@ -4,11 +4,9 @@
 
 **Question:** Do promotions move incremental sales, or are they mostly aligned with periods that would have been strong anyway?
 
-This repo is a self-contained side project: panel construction, transparent identification notes, and outputs a reviewer can skim in a few minutes (README + figures + CSVs).
-
 ---
 
-## TL;DR for a hiring manager
+## TL;DR
 
 - **What I did:** Built a **store × day** panel, merged store metadata, and estimated **how log daily sales move on promotion days** while stripping out slow-moving store differences and common calendar shocks.
 - **What I found (Rossmann):** In the main specification, promotion days are associated with roughly **0.31 log points** higher sales (on the order of **one-third** higher volume in levels under a log link), after controlling for store fixed effects, **ISO week** fixed effects, day-of-week, and holiday indicators—with **standard errors clustered by store** (within-R² about **0.43** on the estimation sample).
