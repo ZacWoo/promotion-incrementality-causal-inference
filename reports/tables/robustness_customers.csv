@@ -1,0 +1,2 @@
+model,coef_promo,se_promo,note
+with_log_customers,0.1401331154564702,0.0012076373628765204,Customers may absorb part of the promo channel; interpret cautiously.
