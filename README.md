@@ -45,48 +45,6 @@ Exploratory checks show **promo is identical across stores on each date**. That 
 
 ---
 
-## How to run
-
-```bash
-cd promotion-incrementality-causal-inference
-python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python scripts/download_data.py
-python src/run_analysis.py
-```
-
-Optional: open `notebooks/promotion_incrementality_analysis.ipynb` for a **step-by-step** walkthrough (EDA, identification, FE, event study, heterogeneity). Run all cells after `python scripts/download_data.py`.
-
----
-
-## Outputs (for reviewers)
-
-| Path | Contents |
-|------|-----------|
-| `reports/figures/fig_promo_calendar.png` | How often promo is “on” over time (national series) |
-| `reports/figures/fig_event_study.png` | Leads/lags of the promo calendar (±3 days) |
-| `reports/figures/fig_heterogeneity.png` | Interaction coefficients (competition + Promo2) |
-| `reports/tables/main_twfe.csv` | Main promo coefficient |
-| `reports/tables/event_study_leads_lags.csv` | Event-study coefficients |
-| `reports/tables/heterogeneity_interactions.csv` | Interaction terms |
-| `reports/tables/robustness_customers.csv` | Promo with `log(Customers)` control |
-
----
-
-## Repo layout
-
-```
-data/raw/          # train.csv, store.csv (downloaded, not required in git)
-notebooks/         # promotion_incrementality_analysis.ipynb (narrative analysis)
-reports/figures/   # Plots for README / portfolio
-reports/tables/    # CSV results
-scripts/           # download_data.py
-src/run_analysis.py
-```
-
----
-
 ## Tools
 
 Python 3.9+; **linearmodels** (`PanelOLS`) for fixed effects; **pandas** for panel prep; **matplotlib** / **seaborn** for plots.
